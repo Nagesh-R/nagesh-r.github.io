@@ -2,7 +2,7 @@
   <header class="navbar">
     <section class="navbar-section">
       <nuxt-link :to="{ name: 'index' }" class="avbar-brand mr-2">
-        <h1>Nagesh</h1>
+        <h1 class="dancing-script">Nagesh</h1>
       </nuxt-link>
       <!-- <nuxt-link class="btn btn-link" :to="{ name: 'post' }"> POST </nuxt-link> -->
       <!-- <a href="..." class="btn btn-link">Docs</a>
@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .avbar-brand {
   color: #06b0f1;
 }

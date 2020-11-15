@@ -1,0 +1,10 @@
+
+@font-face {
+  font-family: 'DancingScript';
+  font-weight: 600;
+  src: url(DancingScript-SemiBold.ttf);
+}
+
+.dancing-script {
+  font-family: DancingScript;
+}
