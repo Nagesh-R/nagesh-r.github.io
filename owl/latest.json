@@ -1,0 +1,11 @@
+{
+  "version": "0.7.0",
+  "notes": "OWL 0.7.0",
+  "pub_date": "2026-10-10T04:16:51Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRL0c1OC8wUVRHR0JxdmVwYXA4V2h4RGtXVVdpNUdvVUY0TzVzR1JCamRFUURGRE9sbjJHMy9RNjhCTHNoMVBKbmNITkNZbC85Y093dEtkMmkvQW5HQmRKUnB6VlF0SHdZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNjA1ODEwCWZpbGU6T1dMLmFwcC50YXIuZ3oJdmVyc2lvbjowLjcuMApYS2xwZmhYOGNDdjVQd3V3aXBGVllsdEYxdXBqVXN1d08vOUpMeVBleEFqd2NtaEJxbUNHRHdFSDZDWGFoOEdVNnZndkJXL1RLL3NCcHFQOHMrc2tCZz09Cg==",
+      "url": "https://github.com/nageshkr/owl/releases/download/v0.7.0/OWL.app.tar.gz"
+    }
+  }
+}
