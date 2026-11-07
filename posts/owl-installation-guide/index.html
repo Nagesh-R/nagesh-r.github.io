@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f08c00"><script>
+        (() => {
+            try {
+                const stored = localStorage.getItem("theme");
+                const prefersDark =
+                    window.matchMedia &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches;
+                const theme =
+                    stored === "light" || stored === "dark"
+                        ? stored
+                        : prefersDark
+                          ? "dark"
+                          : "light";
+                document.documentElement.classList.toggle(
+                    "dark",
+                    theme === "dark",
+                );
+                document.documentElement.dataset.theme = theme;
+            } catch (_) {
+                document.documentElement.classList.add("dark");
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script><title>OWL : Installation Guide  | Nagesh K R</title><meta name="description" content="Everything you need to get started with OWL."><link rel="canonical" href="https://nageshkr.com/posts/owl-installation-guide/"><link rel="icon" href="/favicon.ico" sizes="any"><meta name="robots" content="index,follow"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:title" content="OWL : Installation Guide  | Nagesh K R"><meta property="og:description" content="Everything you need to get started with OWL."><meta property="og:url" content="https://nageshkr.com/posts/owl-installation-guide/"><meta property="og:image" content="https://nageshkr.com/me.png"><meta property="og:image:alt" content="Nagesh K R profile image"><meta property="og:site_name" content="Nagesh K R"><meta property="og:locale" content="en_US"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="OWL : Installation Guide  | Nagesh K R"><meta name="twitter:description" content="Everything you need to get started with OWL."><meta name="twitter:image" content="https://nageshkr.com/me.png"><meta name="twitter:image:alt" content="Nagesh K R profile image"><script data-goatcounter="https://nageshkr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script><link rel="stylesheet" href="/_astro/404.DxRAv-5W.css"></head><body><a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-indigo-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a><div class="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-reading-progress hidden><div class="reading-progress-bar" data-reading-progress-bar></div></div><div class="flex min-h-screen flex-col bg-gray-900"><!-- Header --><header class="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-gray-900/90 backdrop-blur"><nav aria-label="Primary navigation" class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"><div class="flex lg:flex-1"><a href="/" class="-m-1.5 p-1.5 transition hover:opacity-80"><span class="sr-only">Nagesh — home</span><img src="/logo.png" alt="" class="h-10 w-auto" width="40" height="40"></a></div><div class="flex items-center gap-x-3 lg:hidden"><button type="button" class="theme-toggle inline-flex size-9 items-center justify-center rounded-md text-gray-300 ring-1 ring-white/10 transition hover:text-indigo-300 hover:ring-white/25" aria-label="Toggle color theme" title="Toggle light / dark theme" data-astro-cid-l6lhmie6><!-- Sun (shown in dark mode: click to go light) --><svg class="theme-icon-sun size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" data-astro-cid-l6lhmie6><circle cx="12" cy="12" r="4" data-astro-cid-l6lhmie6></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" stroke-linecap="round" data-astro-cid-l6lhmie6></path></svg><!-- Moon (shown in light mode: click to go dark) --><svg class="theme-icon-moon size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-l6lhmie6><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" data-astro-cid-l6lhmie6></path></svg></button><script type="module">function e(e){document.documentElement.classList.toggle(`dark`,e===`dark`),document.documentElement.dataset.theme=e;try{localStorage.setItem(`theme`,e)}catch{}}function t(){document.querySelectorAll(`.theme-toggle`).forEach(t=>{t.dataset.bound||(t.dataset.bound=`true`,t.addEventListener(`click`,()=>{e(document.documentElement.classList.contains(`dark`)?`light`:`dark`)}))})}t(),document.addEventListener(`astro:page-load`,t);</script><button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200 transition hover:text-white"><span class="sr-only">Open main menu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6"><path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div><div class="hidden lg:flex lg:items-center lg:gap-x-1"><a href="/" class="rounded-md px-3 py-1.5 text-sm font-semibold transition text-gray-200 hover:text-white hover:bg-white/5">Home</a><a href="/about" class="rounded-md px-3 py-1.5 text-sm font-semibold transition text-gray-200 hover:text-white hover:bg-white/5">About</a><a href="/projects" class="rounded-md px-3 py-1.5 text-sm font-semibold transition text-gray-200 hover:text-white hover:bg-white/5">Projects</a><a href="/blog" class="rounded-md px-3 py-1.5 text-sm font-semibold transition text-gray-200 hover:text-white hover:bg-white/5">Blog</a><a href="/contact" class="rounded-md px-3 py-1.5 text-sm font-semibold transition text-gray-200 hover:text-white hover:bg-white/5">Contact</a></div><div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-x-3"><button type="button" class="theme-toggle inline-flex size-9 items-center justify-center rounded-md text-gray-300 ring-1 ring-white/10 transition hover:text-indigo-300 hover:ring-white/25" aria-label="Toggle color theme" title="Toggle light / dark theme" data-astro-cid-l6lhmie6><!-- Sun (shown in dark mode: click to go light) --><svg class="theme-icon-sun size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" data-astro-cid-l6lhmie6><circle cx="12" cy="12" r="4" data-astro-cid-l6lhmie6></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41" stroke-linecap="round" data-astro-cid-l6lhmie6></path></svg><!-- Moon (shown in light mode: click to go dark) --><svg class="theme-icon-moon size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-astro-cid-l6lhmie6><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" data-astro-cid-l6lhmie6></path></svg></button><!--  <a
+                href="/nagesh-kr-resume.pdf"
+                download
+                class="rounded-md px-3.5 py-2 text-sm font-semibold text-gray-200 ring-1 ring-white/15 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >
+                Résumé
+            </a> --><a href="/projects" class="rounded-md bg-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">View My Work</a></div></nav><el-dialog><dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden"><div tabindex="0" class="fixed inset-0 focus:outline-none"><el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10"><div class="flex items-center justify-between"><a href="/" class="-m-1.5 p-1.5"><span class="sr-only">Nagesh — home</span><img src="/logo.png" alt="" class="h-8 w-auto" width="32" height="32"></a><button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200"><span class="sr-only">Close menu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6"><path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div><div class="mt-6 flow-root"><div class="-my-6 divide-y divide-white/10"><div class="space-y-1 py-6"><a href="/" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold transition text-white hover:bg-white/5">Home</a><a href="/about" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold transition text-white hover:bg-white/5">About</a><a href="/projects" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold transition text-white hover:bg-white/5">Projects</a><a href="/blog" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold transition text-white hover:bg-white/5">Blog</a><a href="/contact" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold transition text-white hover:bg-white/5">Contact</a></div><div class="space-y-3 py-6"><a href="/projects" class="block rounded-lg bg-indigo-500 px-3 py-2.5 text-center text-base font-semibold text-white transition hover:bg-indigo-400">View My Work</a><a href="/nagesh-kr-resume.pdf" download class="block rounded-lg px-3 py-2.5 text-center text-base font-semibold text-gray-200 ring-1 ring-white/15 transition hover:bg-white/5">Download Résumé</a></div></div></div></el-dialog-panel></div></dialog></el-dialog></header><main id="main-content" class="isolate flex-1"><article class="mx-auto w-full max-w-3xl px-6 py-20 sm:py-28 lg:max-w-[50rem] lg:px-8 xl:max-w-[70rem]" data-astro-cid-ssdmjifj><div class="xl:grid xl:grid-cols-[minmax(0,46rem)_17rem] xl:gap-12" data-astro-cid-ssdmjifj><div class="min-w-0" data-astro-cid-ssdmjifj><a href="/blog" class="text-sm font-medium text-indigo-200 hover:text-indigo-100" data-astro-cid-ssdmjifj>&larr; Back to blog</a><header class="mt-6" data-astro-cid-ssdmjifj><p class="text-sm font-medium text-indigo-200" data-astro-cid-ssdmjifj><span data-astro-cid-ssdmjifj>Published 7 Nov 2026</span></p><h1 class="mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl" data-astro-cid-ssdmjifj>OWL : Installation Guide </h1><p class="mt-4 text-lg/8 text-gray-300" data-astro-cid-ssdmjifj>Everything you need to get started with OWL.</p></header><div class="mt-8 xl:hidden" data-astro-cid-ssdmjifj><details class="post-toc-mobile" data-astro-cid-u7wjlsqt><summary class="post-toc-summary" data-astro-cid-u7wjlsqt><span id="post-toc-title-mobile" data-astro-cid-u7wjlsqt>On this page</span><span class="post-toc-count" data-astro-cid-u7wjlsqt>21 sections</span></summary><nav aria-labelledby="post-toc-title-mobile" data-astro-cid-u7wjlsqt><ol class="post-toc-list" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#installing-owl" data-toc-link="installing-owl" data-astro-cid-u7wjlsqt>Installing OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#1-before-you-begin" data-toc-link="1-before-you-begin" data-astro-cid-u7wjlsqt>1. Before you begin</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#system-requirements" data-toc-link="system-requirements" data-astro-cid-u7wjlsqt>System requirements</a></li><li data-astro-cid-u7wjlsqt><a href="#supported-platforms" data-toc-link="supported-platforms" data-astro-cid-u7wjlsqt>Supported platforms</a></li><li data-astro-cid-u7wjlsqt><a href="#optional-ollama--llama" data-toc-link="optional-ollama--llama" data-astro-cid-u7wjlsqt>Optional: Ollama / llama</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#2-download-owl" data-toc-link="2-download-owl" data-astro-cid-u7wjlsqt>2. Download OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#3-install-owl" data-toc-link="3-install-owl" data-astro-cid-u7wjlsqt>3. Install OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#4-first-launch" data-toc-link="4-first-launch" data-astro-cid-u7wjlsqt>4. First launch</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#macos-security-warning" data-toc-link="macos-security-warning" data-astro-cid-u7wjlsqt>macOS security warning</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#5-set-up-your-owl-vault" data-toc-link="5-set-up-your-owl-vault" data-astro-cid-u7wjlsqt>5. Set up your OWL vault</a></li><li data-astro-cid-u7wjlsqt><a href="#6-configure-your-local-ai-assistant" data-toc-link="6-configure-your-local-ai-assistant" data-astro-cid-u7wjlsqt>6. Configure your local AI assistant</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#option-a-use-the-bundled-ai-engine-recommended-for-beginners" data-toc-link="option-a-use-the-bundled-ai-engine-recommended-for-beginners" data-astro-cid-u7wjlsqt>Option A: Use the bundled AI engine (recommended for beginners)</a></li><li data-astro-cid-u7wjlsqt><a href="#option-b-use-ollama" data-toc-link="option-b-use-ollama" data-astro-cid-u7wjlsqt>Option B: Use Ollama</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#7-enable-semantic-search" data-toc-link="7-enable-semantic-search" data-astro-cid-u7wjlsqt>7. Enable semantic search</a></li><li data-astro-cid-u7wjlsqt><a href="#8-improve-search-with-re-ranking" data-toc-link="8-improve-search-with-re-ranking" data-astro-cid-u7wjlsqt>8. Improve search with re-ranking</a></li><li data-astro-cid-u7wjlsqt><a href="#9-troubleshooting" data-toc-link="9-troubleshooting" data-astro-cid-u7wjlsqt>9. Troubleshooting</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#ai-model-download-fails" data-toc-link="ai-model-download-fails" data-astro-cid-u7wjlsqt>AI model download fails</a></li><li data-astro-cid-u7wjlsqt><a href="#ai-assistant-is-not-responding" data-toc-link="ai-assistant-is-not-responding" data-astro-cid-u7wjlsqt>AI assistant is not responding</a></li><li data-astro-cid-u7wjlsqt><a href="#semantic-search-returns-no-results" data-toc-link="semantic-search-returns-no-results" data-astro-cid-u7wjlsqt>Semantic search returns no results</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#10-whats-next" data-toc-link="10-whats-next" data-astro-cid-u7wjlsqt>10. What’s next?</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#need-help" data-toc-link="need-help" data-astro-cid-u7wjlsqt>Need help?</a></li></ol></li></ol></nav></details><script type="module">var e=[],t=[],n=null,r=!1;function i(e){let t=e.closest(`[data-post-toc]`);if(!t||t.scrollHeight<=t.clientHeight)return;let n=e.offsetTop,r=n+e.offsetHeight;n<t.scrollTop?t.scrollTop=n-8:r>t.scrollTop+t.clientHeight&&(t.scrollTop=r-t.clientHeight+8)}function a(){if(!e.length)return;let r=null;for(let e of t)if(e.getBoundingClientRect().top<=120)r=e.id;else break;if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2&&t.length&&(r=t[t.length-1].id),r!==n){n=r;for(let t of e)t.removeAttribute(`data-toc-parent-active`);for(let t of e)t.dataset.tocLink===r?(t.setAttribute(`aria-current`,`location`),t.closest(`.post-toc-sub`)?.closest(`li`)?.querySelector(`:scope > a`)?.setAttribute(`data-toc-parent-active`,``),i(t)):t.removeAttribute(`aria-current`)}}function o(){e=Array.from(document.querySelectorAll(`[data-toc-link]`)),t=[...new Set(e.map(e=>e.dataset.tocLink||``))].map(e=>document.getElementById(e)).filter(e=>e!==null),n=null,a()}function s(){if(r)return;r=!0;let e=!1,t=()=>{e||(e=!0,window.requestAnimationFrame(()=>{e=!1,a()}))};window.addEventListener(`scroll`,t,{passive:!0}),window.addEventListener(`resize`,t),document.addEventListener(`click`,e=>{(e.target?.closest?.(`.post-toc-mobile a`))?.closest(`details`)?.removeAttribute(`open`)})}s(),o(),document.addEventListener(`astro:page-load`,o);</script></div><div class="post-content mt-10 space-y-5 text-lg/8 text-gray-300" data-astro-cid-ssdmjifj><section class="post-hero post-hero--has-bg" style="background-image:url(&#x27;/images/owl-installation-guide/owl.png&#x27;)">
+  <div class="post-hero-inner">
+  <p class="post-hero-eyebrow">Your workspace starts here</p>
+  <h2 class="post-hero-headline">Install OWL. Keep everything yours.</h2>
+  <p class="post-hero-sub">Follow this step-by-step guide to install OWL, configure your local AI engine, and set up your private workspace</p>
+  </div>
+</section>
+<h2 id="installing-owl">Installing OWL</h2>
+<p>Get OWL installed and ready to use in a few simple steps. This guide walks you through downloading the application, configuring your local AI engine and setting up your private workspace.</p>
+<p>OWL processes your notes, documents and AI conversations locally. An internet connection is needed initially to download the application and AI models. Once everything is installed, OWL can operate offline.</p>
+<h2 id="1-before-you-begin">1. Before you begin</h2>
+<p>Before installing OWL, make sure your computer meets the following requirements.</p>
+<h3 id="system-requirements">System requirements</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Requirement</th><th>Details</th></tr></thead><tbody><tr><td>Operating system</td><td>macOS</td></tr><tr><td>Processor</td><td>Apple Silicon or Intel</td></tr><tr><td>Application</td><td>Latest OWL release</td></tr><tr><td>Internet connection</td><td>Required for initial download and model downloads</td></tr><tr><td>GPU</td><td>Not required</td></tr><tr><td>Memory (RAM)</td><td>8 GB (Minimum)</td></tr></tbody></table>
+<h3 id="supported-platforms">Supported platforms</h3>
+<p>OWL currently provides packaged installations for:</p>
+<ul>
+<li>macOS – Apple Silicon (ARM64)</li>
+<li>macOS – Intel (x64)</li>
+</ul>
+<p>Linux and Windows builds are not currently officially packaged.</p>
+<h3 id="optional-ollama--llama">Optional: Ollama / llama</h3>
+<p>OWL includes a bundled local AI engine, so installing an external AI runtime is not mandatory.</p>
+<p>If you prefer managing your own AI models, you can optionally install Ollama / llma app.</p>
+<h2 id="2-download-owl">2. Download OWL</h2>
+<p>Download the latest version of OWL from the official GitHub releases page.</p>
+<p><a href="https://github.com/nageshkr/owl/releases/tag/v1.5.1" rel="noopener noreferrer" target="_blank">Download OWL – Latest Release</a></p>
+<h2 id="3-install-owl">3. Install OWL</h2>
+<p>Once the download is complete:</p>
+<ol>
+<li>
+<p>Locate the downloaded .dmg file.</p>
+</li>
+<li>
+<p>Double-click the file to mount the installer.</p>
+</li>
+<li>
+<p>Drag the OWL application into your Applications folder.</p>
+</li>
+<li>
+<p>Wait for the copy operation to finish.</p>
+</li>
+<li>
+<p>Eject the mounted OWL installer.</p>
+</li>
+</ol>
+<p><em>OWL is now installed on your Mac.</em></p>
+<h2 id="4-first-launch">4. First launch</h2>
+<p>Open your Applications folder and launch OWL.</p>
+<h3 id="macos-security-warning">macOS security warning</h3>
+<p>The current OWL release is not signed with an Apple Developer certificate. Consequently, macOS Gatekeeper may display the following warning:</p>
+<p><strong>“OWL is damaged and can’t be opened.”</strong></p>
+<p>This is a Gatekeeper restriction associated with the unsigned downloaded application; it does not necessarily indicate that the application is damaged.</p>
+<p>If you downloaded OWL from the official release page and trust the release, follow these steps:</p>
+<ol>
+<li>
+<p>Make sure OWL has been copied into your Applications folder.</p>
+</li>
+<li>
+<p>Open Terminal.</p>
+</li>
+<li>
+<p>Execute the following command:</p>
+</li>
+</ol>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>xattr -dr com.apple.quarantine /Applications/OWL.app</span></span></code></pre>
+<ol start="4">
+<li>
+<p>Return to your Applications folder.</p>
+</li>
+<li>
+<p>Open OWL again.</p>
+</li>
+</ol>
+<p>This removes the macOS quarantine attribute from the OWL application. Only do this for a release you trust.</p>
+<p><em>This is a one-time operation. Subsequent in-app updates do not require repeating it.</em></p>
+<h2 id="5-set-up-your-owl-vault">5. Set up your OWL vault</h2>
+<p>On your first launch, OWL will guide you through creating your vault.</p>
+<p>You will be asked to configure a master passphrase.</p>
+<section class="post-carousel" data-carousel="">
+  <div class="post-carousel-viewport" data-carousel-viewport="" tabindex="0">
+    <div class="post-carousel-track" data-carousel-track="">
+    <figure class="post-carousel-slide">
+      <img src="/images/owl-installation-guide/owl-1.png" alt="OWL vault screen" loading="lazy">
+      <figcaption class="post-carousel-cap">OWL vault screen</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+<p>The master passphrase protects your encrypted vault and is used to unlock protected content.</p>
+<p>Important: Keep your master passphrase safe. OWL uses it to derive the encryption key, and a forgotten passphrase cannot be recovered.</p>
+<p>Once the vault is initialized, you can start using your workspace.</p>
+<h2 id="6-configure-your-local-ai-assistant">6. Configure your local AI assistant</h2>
+<p>OWL supports two local AI configurations:</p>
+<p>Bundled AI engine (llama.cpp)</p>
+<p>External Ollama / llama provider</p>
+<h3 id="option-a-use-the-bundled-ai-engine-recommended-for-beginners">Option A: Use the bundled AI engine (recommended for beginners)</h3>
+<p>OWL includes a bundled AI engine, so you don’t need to install another application.</p>
+<ol>
+<li>
+<p>Open OWL.</p>
+</li>
+<li>
+<p>Navigate to Settings → Local AI.</p>
+</li>
+<li>
+<p>Select the bundled AI provider.</p>
+</li>
+<li>
+<p>Choose an available AI model.</p>
+</li>
+<li>
+<p>Allow OWL to download the model.</p>
+</li>
+<li>
+<p>Wait until the model is ready.</p>
+</li>
+</ol>
+<p>The default model is designed to be small and fast. You can select larger models if your computer has sufficient memory and storage.</p>
+<section class="post-carousel" data-carousel="">
+  <div class="post-carousel-viewport" data-carousel-viewport="" tabindex="0">
+    <div class="post-carousel-track" data-carousel-track="">
+    <figure class="post-carousel-slide">
+      <img src="/images/owl-installation-guide/owl-4.png" alt="OWL model download screen" loading="lazy">
+      <figcaption class="post-carousel-cap">OWL vault screen</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+<h3 id="option-b-use-ollama">Option B: Use Ollama</h3>
+<p>If you already use Ollama or prefer managing your own models:</p>
+<ol>
+<li>
+<p>Download and install Ollama.</p>
+</li>
+<li>
+<p>Download the model you want to use.</p>
+</li>
+<li>
+<p>Open OWL.</p>
+</li>
+<li>
+<p>Navigate to Settings → Local AI.</p>
+</li>
+<li>
+<p>Select the Ollama provider.</p>
+</li>
+<li>
+<p>Choose one of your locally available models.</p>
+</li>
+</ol>
+<p>OWL will manage starting and stopping the Ollama process.</p>
+<h2 id="7-enable-semantic-search">7. Enable semantic search</h2>
+<p>OWL supports hybrid search, combining keyword-based and semantic search to retrieve relevant information from your notes.</p>
+<p>Keyword search works without additional model downloads.</p>
+<p>To enable semantic search:</p>
+<ol>
+<li>
+<p>Open Settings → Notes Q&#x26;A.</p>
+</li>
+<li>
+<p>Download the embedding model.</p>
+</li>
+<li>
+<p>Select Rebuild semantic index.</p>
+</li>
+<li>
+<p>Wait for the indexing process to complete.</p>
+</li>
+</ol>
+<p>Once indexing is complete, OWL can use semantic search when answering questions about your notes.</p>
+<section class="post-carousel" data-carousel="">
+  <div class="post-carousel-viewport" data-carousel-viewport="" tabindex="0">
+    <div class="post-carousel-track" data-carousel-track="">
+    <figure class="post-carousel-slide">
+      <img src="/images/owl-installation-guide/owl-7.png" alt="OWL start-up screen" loading="lazy">
+      <figcaption class="post-carousel-cap">OWL enable semantic search screen</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+<p><strong><em>Note</em></strong>: <em>Encrypted notes are never indexed or supplied to the AI in plaintext.</em></p>
+<h2 id="8-improve-search-with-re-ranking">8. Improve search with re-ranking</h2>
+<p>Re-ranking improves search relevance by evaluating the initial search results and ordering them according to how closely they match your query.</p>
+<p>OWL first retrieves relevant results using its search mechanisms. The re-ranking model then evaluates those results to improve their relevance before they are presented.</p>
+<p>To enable semantic search:</p>
+<ol>
+<li>
+<p>Open Settings → Search.</p>
+</li>
+<li>
+<p>Download the re-ranker model.</p>
+</li>
+<li>
+<p>Enable Reranking.</p>
+</li>
+</ol>
+<section class="post-carousel" data-carousel="">
+  <div class="post-carousel-viewport" data-carousel-viewport="" tabindex="0">
+    <div class="post-carousel-track" data-carousel-track="">
+    <figure class="post-carousel-slide">
+      <img src="/images/owl-installation-guide/owl-8.png" alt="OWL enable reranking screen" loading="lazy">
+      <figcaption class="post-carousel-cap">OWL vault screen</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+<h2 id="9-troubleshooting">9. Troubleshooting</h2>
+<p><strong>OWL is damaged and can’t be opened</strong></p>
+<p>This is a macOS Gatekeeper issue related to the unsigned application.</p>
+<p>Follow the instructions in First launch → macOS security warning.</p>
+<h3 id="ai-model-download-fails">AI model download fails</h3>
+<ul>
+<li>
+<p>Check your internet connection.</p>
+</li>
+<li>
+<p>Ensure sufficient disk space is available.</p>
+</li>
+<li>
+<p>Retry the download from Settings → Local AI.</p>
+</li>
+</ul>
+<h3 id="ai-assistant-is-not-responding">AI assistant is not responding</h3>
+<ul>
+<li>
+<p>Verify that the selected model has finished downloading.</p>
+</li>
+<li>
+<p>Check that the selected AI provider is running.</p>
+</li>
+<li>
+<p>If using Ollama, ensure it is installed and available.</p>
+</li>
+</ul>
+<h3 id="semantic-search-returns-no-results">Semantic search returns no results</h3>
+<ul>
+<li>
+<p>Verify that the embedding model has been downloaded.</p>
+</li>
+<li>
+<p>Rebuild the semantic index.</p>
+</li>
+<li>
+<p>Confirm that your notes contain searchable content.</p>
+</li>
+</ul>
+<h2 id="10-whats-next">10. What’s next?</h2>
+<p>Now that OWL is installed, explore the features available in your personal workspace.</p>
+<ul>
+<li>
+<p><strong>Notes</strong>: Create, organise and manage your Markdown notes.</p>
+</li>
+<li>
+<p><strong>AI Assistant</strong>: Chat with your notes and documents.</p>
+</li>
+<li>
+<p><strong>Documents</strong>: Import PDFs and ask questions about their contents.</p>
+</li>
+<li>
+<p><strong>Tasks &#x26; Projects</strong>: Organise your work and track progress.</p>
+</li>
+<li>
+<p><strong>Time Tracking</strong>: Monitor time spent on tasks and meetings.</p>
+</li>
+<li>
+<p><strong>Jira Integration</strong>: Connect your Jira projects and manage worklogs.</p>
+</li>
+</ul>
+<p>Explore the OWL documentation to get the most out of your personal workspace.</p>
+<h3 id="need-help">Need help?</h3>
+<p>If you encounter an issue during installation, visit the <a href="https://github.com/nageshkr/owl" rel="noopener noreferrer" target="_blank">OWL GitHub repository</a> and open an issue with details about your macOS version and the problem you’re experiencing.</p></div><aside class="mt-16 border-t border-white/10 pt-8" data-astro-cid-ssdmjifj><p class="text-xs font-semibold tracking-wide text-gray-400 uppercase" data-astro-cid-ssdmjifj>Written by</p><div class="mt-4 flex items-center gap-4" data-astro-cid-ssdmjifj><span class="flex size-12 flex-none items-center justify-center rounded-full bg-indigo-500/20 text-base font-semibold text-indigo-200 ring-1 ring-white/15" aria-hidden="true" data-astro-cid-ssdmjifj>NK</span><div class="min-w-0" data-astro-cid-ssdmjifj><p class="font-semibold text-white" data-astro-cid-ssdmjifj>Nagesh K R</p><p class="text-sm text-gray-400" data-astro-cid-ssdmjifj>Full Stack Engineer · AEM · Cloud · DevOps</p></div></div></aside></div><aside class="hidden xl:block" data-astro-cid-ssdmjifj><nav class="post-toc" aria-labelledby="post-toc-title-desktop" data-post-toc data-astro-cid-u7wjlsqt><p id="post-toc-title-desktop" class="post-toc-title" data-astro-cid-u7wjlsqt>On this page</p><ol class="post-toc-list" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#installing-owl" data-toc-link="installing-owl" data-astro-cid-u7wjlsqt>Installing OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#1-before-you-begin" data-toc-link="1-before-you-begin" data-astro-cid-u7wjlsqt>1. Before you begin</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#system-requirements" data-toc-link="system-requirements" data-astro-cid-u7wjlsqt>System requirements</a></li><li data-astro-cid-u7wjlsqt><a href="#supported-platforms" data-toc-link="supported-platforms" data-astro-cid-u7wjlsqt>Supported platforms</a></li><li data-astro-cid-u7wjlsqt><a href="#optional-ollama--llama" data-toc-link="optional-ollama--llama" data-astro-cid-u7wjlsqt>Optional: Ollama / llama</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#2-download-owl" data-toc-link="2-download-owl" data-astro-cid-u7wjlsqt>2. Download OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#3-install-owl" data-toc-link="3-install-owl" data-astro-cid-u7wjlsqt>3. Install OWL</a></li><li data-astro-cid-u7wjlsqt><a href="#4-first-launch" data-toc-link="4-first-launch" data-astro-cid-u7wjlsqt>4. First launch</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#macos-security-warning" data-toc-link="macos-security-warning" data-astro-cid-u7wjlsqt>macOS security warning</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#5-set-up-your-owl-vault" data-toc-link="5-set-up-your-owl-vault" data-astro-cid-u7wjlsqt>5. Set up your OWL vault</a></li><li data-astro-cid-u7wjlsqt><a href="#6-configure-your-local-ai-assistant" data-toc-link="6-configure-your-local-ai-assistant" data-astro-cid-u7wjlsqt>6. Configure your local AI assistant</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#option-a-use-the-bundled-ai-engine-recommended-for-beginners" data-toc-link="option-a-use-the-bundled-ai-engine-recommended-for-beginners" data-astro-cid-u7wjlsqt>Option A: Use the bundled AI engine (recommended for beginners)</a></li><li data-astro-cid-u7wjlsqt><a href="#option-b-use-ollama" data-toc-link="option-b-use-ollama" data-astro-cid-u7wjlsqt>Option B: Use Ollama</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#7-enable-semantic-search" data-toc-link="7-enable-semantic-search" data-astro-cid-u7wjlsqt>7. Enable semantic search</a></li><li data-astro-cid-u7wjlsqt><a href="#8-improve-search-with-re-ranking" data-toc-link="8-improve-search-with-re-ranking" data-astro-cid-u7wjlsqt>8. Improve search with re-ranking</a></li><li data-astro-cid-u7wjlsqt><a href="#9-troubleshooting" data-toc-link="9-troubleshooting" data-astro-cid-u7wjlsqt>9. Troubleshooting</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#ai-model-download-fails" data-toc-link="ai-model-download-fails" data-astro-cid-u7wjlsqt>AI model download fails</a></li><li data-astro-cid-u7wjlsqt><a href="#ai-assistant-is-not-responding" data-toc-link="ai-assistant-is-not-responding" data-astro-cid-u7wjlsqt>AI assistant is not responding</a></li><li data-astro-cid-u7wjlsqt><a href="#semantic-search-returns-no-results" data-toc-link="semantic-search-returns-no-results" data-astro-cid-u7wjlsqt>Semantic search returns no results</a></li></ol></li><li data-astro-cid-u7wjlsqt><a href="#10-whats-next" data-toc-link="10-whats-next" data-astro-cid-u7wjlsqt>10. What’s next?</a><ol class="post-toc-sub" data-astro-cid-u7wjlsqt><li data-astro-cid-u7wjlsqt><a href="#need-help" data-toc-link="need-help" data-astro-cid-u7wjlsqt>Need help?</a></li></ol></li></ol></nav></aside></div></article></main><!-- Footer --><footer class="mt-auto w-full bg-gray-900"><div class="mx-auto max-w-7xl px-6 pt-1 lg:px-8"><div class="h-px w-full bg-white/20"></div></div><div class="mx-auto max-w-7xl px-6 py-8 md:flex md:items-center md:justify-between lg:px-8"><div class="flex justify-center gap-x-6 md:order-2"><a href="https://github.com/nageshkr" class="text-gray-400 transition hover:text-indigo-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"><span class="sr-only">GitHub</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-6"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a><a href="https://www.linkedin.com/in/nagesh-k-r-b1517b18/" class="text-gray-400 transition hover:text-indigo-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"><span class="sr-only">LinkedIn</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-6"><path d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003ZM7.119 20.452H3.555V9h3.564v11.452ZM5.337 7.433a2.062 2.062 0 1 1 .001-4.124 2.062 2.062 0 0 1-.001 4.124ZM20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286Z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a></div><p class="mt-8 text-center text-sm/6 text-gray-400 md:order-1 md:mt-0">&copy; 2026 Nagesh K R, All rights reserved.</p></div></footer></div></body></html><script type="module">function e(){document.querySelectorAll(`.post-content pre`).forEach(e=>{if(e.dataset.copyReady)return;let t=(e.querySelector(`code`)??e).textContent??``;if(!t.trim())return;e.dataset.copyReady=`true`;let n=document.createElement(`button`);n.type=`button`,n.className=`code-copy-btn`,n.setAttribute(`aria-label`,`Copy code to clipboard`);let r=e=>{n.innerHTML=e===`copied`?`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Copied</span>`:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Copy</span>`};r(`idle`);let i;n.addEventListener(`click`,async()=>{try{if(navigator.clipboard?.writeText)await navigator.clipboard.writeText(t);else{let e=document.createElement(`textarea`);e.value=t,e.style.position=`fixed`,e.style.opacity=`0`,document.body.appendChild(e),e.select(),document.execCommand(`copy`),e.remove()}n.classList.add(`is-copied`),n.setAttribute(`aria-label`,`Code copied`),r(`copied`),window.clearTimeout(i),i=window.setTimeout(()=>{n.classList.remove(`is-copied`),n.setAttribute(`aria-label`,`Copy code to clipboard`),r(`idle`)},2e3)}catch{n.setAttribute(`aria-label`,`Copy failed`)}}),e.appendChild(n)})}e(),document.addEventListener(`astro:page-load`,e);</script><script type="module">function e(){let e=document.querySelector(`[data-reading-progress-bar]`),t=document.querySelector(`[data-reading-progress]`),n=document.querySelector(`article`);if(!e||!t)return;if(!n){t.hidden=!0;return}t.hidden=!1;let r=n.offsetHeight-window.innerHeight,i;if(r<=0)i=100;else{let e=n.getBoundingClientRect().top+window.scrollY,t=window.scrollY-e,a=Math.min(1,Math.max(0,t/r));i=Math.round(a*100)}e.style.width=`${i}%`,t.setAttribute(`aria-valuenow`,String(i))}function t(){let t=!1,n=()=>{t||(t=!0,window.requestAnimationFrame(()=>{t=!1,e()}))};window.__readingProgressBound||(window.addEventListener(`scroll`,n,{passive:!0}),window.addEventListener(`resize`,n),window.__readingProgressBound=!0),e()}t(),document.addEventListener(`astro:page-load`,t);</script><script type="module">function e(){document.querySelectorAll(`[data-carousel]`).forEach(e=>{if(e.dataset.carouselBound)return;e.dataset.carouselBound=`true`;let t=e.querySelector(`[data-carousel-viewport]`),n=e.querySelector(`[data-carousel-track]`),r=Array.from(e.querySelectorAll(`.post-carousel-slide`)),i=e.querySelector(`[data-carousel-prev]`),a=e.querySelector(`[data-carousel-next]`),o=e.querySelector(`[data-carousel-dots]`);if(!t||!n||r.length===0)return;if(r.length<2){i?.remove(),a?.remove(),o?.remove(),e.dataset.carouselReady=`true`;return}let s=0,c=()=>{o&&(o.innerHTML=``,r.forEach((e,t)=>{let n=document.createElement(`button`);n.type=`button`,n.className=`post-carousel-dot`+(t===s?` is-active`:``),n.setAttribute(`aria-label`,`Go to image ${t+1}`),n.addEventListener(`click`,()=>u(t)),o.appendChild(n)}))},l=()=>{n.style.transform=`translateX(-${s*100}%)`,i&&(i.disabled=s<=0),a&&(a.disabled=s>=r.length-1),o?.querySelectorAll(`.post-carousel-dot`).forEach((e,t)=>e.classList.toggle(`is-active`,t===s))},u=e=>{s=Math.max(0,Math.min(e,r.length-1)),l()};i?.addEventListener(`click`,()=>u(s-1)),a?.addEventListener(`click`,()=>u(s+1)),t.addEventListener(`keydown`,e=>{e.key===`ArrowLeft`?(e.preventDefault(),u(s-1)):e.key===`ArrowRight`&&(e.preventDefault(),u(s+1))});let d=0,f=!1;t.addEventListener(`touchstart`,e=>{d=e.touches[0].clientX,f=!0},{passive:!0}),t.addEventListener(`touchend`,e=>{if(!f)return;f=!1;let t=e.changedTouches[0].clientX-d;Math.abs(t)>40&&u(s+(t<0?1:-1))},{passive:!0}),c(),l(),e.dataset.carouselReady=`true`})}e(),document.addEventListener(`astro:page-load`,e);</script>
